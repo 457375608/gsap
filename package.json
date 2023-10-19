@@ -1,11 +1,10 @@
 {
-  "name": "create-lib",
-  "private": true,
+  "name": "my_lib",
   "version": "0.0.0",
   "type": "module",
-  "main": "./build/App.mjs",
-  "module": "./build/App.mjs",
-  "types": "./build/type/App.d.ts",
+  "main": "./build/lib.mjs",
+  "module": "./build/lib.mjs",
+  "types": "./build/lib.d.ts",
   "files": [
     "build"
   ],
