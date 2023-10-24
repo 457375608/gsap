@@ -2,9 +2,9 @@
   "name": "create-lib",
   "version": "1.0.0",
   "type": "module",
-  "main": "./build/lib.mjs",
-  "module": "./build/lib.mjs",
-  "types": "./build/lib.d.ts",
+  "main": "./build/lib-entry.mjs",
+  "module": "./build/lib-entry.mjs",
+  "types": "./build/lib-entry.d.ts",
   "files": [
     "build"
   ],
