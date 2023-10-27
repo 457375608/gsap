@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
-import MyLibrary from "./lib.tsx";
+import Test from "./components/Test";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
-    <MyLibrary />
+    <Test />
   </>
 );
