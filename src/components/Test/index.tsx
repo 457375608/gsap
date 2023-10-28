@@ -1,5 +1,5 @@
 const index = () => {
-  return <div className="text-red-700">test</div>;
-};
+  return <div className="text-red-700">test</div>
+}
 
-export default index;
+export default index
