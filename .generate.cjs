@@ -8,7 +8,6 @@ fs.readdir("./src/components", (err, files) => {
       "./src/lib-entry.tsx",
       "//! 此文件构建时自动生成，请勿直接修改!!!\n" +
         files
-          .filter((item) => item !== "Test")
           .map(
             (item) =>
               `export { default as ${item} } from './components/${item}'`
