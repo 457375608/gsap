@@ -7,5 +7,5 @@
     "declarationDir": "build"
   },
   "include": ["src"],
-  "exclude": ["src/**/*/*.stories.tsx", "src/**/*/*.stories.ts"]
+  "exclude": ["src/**/*/*.stories.tsx", "src/**/*/*.stories.ts", "src/main.tsx"]
 }
