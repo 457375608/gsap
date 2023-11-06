@@ -16,7 +16,6 @@
     "build:lib": "node .generate.js && vite build --config vite.lib.ts && tsc -p tsconfig.lib.json"
   },
   "dependencies": {
-    "clipboard": "^2.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
