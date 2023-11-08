@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger)
 /**
  * - description:  统计数值动画
  */
-const Statistic = ({ number }: { number?: number | string }) => {
+const Statistic = ({ number, option }: { number?: number | string; option?: gsap.TweenVars }) => {
   const span = useRef(null)
   const [state, setState] = useState({
     number: 0,
@@ -23,6 +23,7 @@ const Statistic = ({ number }: { number?: number | string }) => {
         trigger: span.current,
         toggleActions: 'restart resume resume resume',
       },
+      ...option,
     })
     return () => {
       tl.kill()
