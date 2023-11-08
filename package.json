@@ -1,6 +1,6 @@
 {
   "name": "@mingyunsnpm/gsap",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./build/lib-entry.js",
   "module": "./build/lib-entry.mjs",
   "types": "./build/lib-entry.d.ts",

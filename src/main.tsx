@@ -15,10 +15,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </button>
     <div className="mt-[1000px]">
       <Slide option={{ y: 30, opacity: 0, scale: 1.2 }}>
-        <Statistic number={100} option={{ opacity: 0 }} />
-        <div className="w-10 h-10 bg-sky-500"></div>
+        <div className="w-10 h-10 bg-sky-500 flex place-content-center place-items-center">
+          <Statistic number={100} />
+        </div>
       </Slide>
     </div>
-    <div className="mt-[1000px]"></div>
   </div>,
 )
