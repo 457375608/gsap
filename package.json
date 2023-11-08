@@ -1,6 +1,6 @@
 {
-  "name": "create-lib",
-  "version": "1.0.0",
+  "name": "@mingyunsnpm/gsap",
+  "version": "1.0.1",
   "main": "./build/lib-entry.js",
   "module": "./build/lib-entry.mjs",
   "types": "./build/lib-entry.d.ts",
@@ -16,6 +16,7 @@
     "build:lib": "node .generate.js && vite build --config vite.lib.ts && tsc -p tsconfig.lib.json"
   },
   "dependencies": {
+    "gsap": "^3.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -41,7 +42,7 @@
     "vite-svg-loader": "^4.0.0"
   },
   "author": "liuin",
-  "description": "初始化项目",
+  "description": "基于gsap二次封装的一些方法",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
