@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - main # 或者你的主分支名称
+      - main
 
 jobs:
   publish-npm:
@@ -14,7 +14,9 @@ jobs:
         with:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install
+
+      - name: Npm install
+        run: npm install
 
       - name: Commit changes
         run: |
@@ -32,7 +34,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build library
-        run: npm run build:lib # 如果你有构建步骤的话
+        run: npm run build:lib
 
       - name: Publish to npm
         run: npm publish
