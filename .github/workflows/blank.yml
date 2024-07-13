@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - @mingyuns/gsap # 或者你的主分支名称
+      - main # 或者你的主分支名称
 
 jobs:
   publish-npm:
@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
+      - run: npm install
       - run: npm run build:lib # 如果你有构建步骤的话
       - run: npm publish
         env:
