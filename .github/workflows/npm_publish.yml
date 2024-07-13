@@ -16,6 +16,14 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
 
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Committing changes before version update"
+        continue-on-error: true
+
       - name: Update version
         run: |
           npm version patch -m "Upgrade to %s"
