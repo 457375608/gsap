@@ -15,7 +15,18 @@ jobs:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
-      - run: npm run build:lib # 如果你有构建步骤的话
-      - run: npm publish
+
+      - name: Update version
+        run: |
+          npm version patch -m "Upgrade to %s"
+          git push origin main --follow-tags
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build library
+        run: npm run build:lib # 如果你有构建步骤的话
+
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
